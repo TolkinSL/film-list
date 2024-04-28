@@ -1,0 +1,9 @@
+.layout {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 1312px;
+    // min-width: 650px;
+    min-height: 100vh;
+    background: var(--background-color);
+}

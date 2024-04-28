@@ -1,0 +1,27 @@
+.main {
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 32px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--header-color);
+}
+
+.caption {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary-color);
+}
+
+.link {
+  margin: 0;
+  color: var(--text-primary-color);
+  text-decoration: none;
+}
+
+.link_active {
+  border-bottom: 1px solid var(--text-primary-color);
+}
