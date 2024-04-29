@@ -1,9 +1,8 @@
-import {Link, useParams} from "react-router-dom";
+import {Link} from "react-router-dom";
 import styles from "./FilmCard.module.scss";
 import cn from "classnames";
-import {useQuery} from "@tanstack/react-query";
-import {dateFormat, fetchFilmInfo} from "../../services/api";
-import {Film, FilmList} from "../../types/types";
+import {dateFormat} from "../../services/api";
+import {Film} from "../../types/types";
 
 interface FilmCardProps {
   film_info: Film;

@@ -1,16 +1,19 @@
-import {Link, useParams} from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 import styles from "./FilmInfo.module.scss";
-import cn from "classnames";
 import {useQuery} from "@tanstack/react-query";
 import {dateFormat, fetchFilmGenres, fetchFilmInfo, genreList} from "../../services/api";
-import {Film, FilmList} from "../../types/types";
 import FilmCard from "../FilmCard/FilmCard.tsx";
 
 function FilmInfo() {
   const {id } = useParams<"id">();
   const {genre_id} = useParams<"genre_id">();
+  const navigate = useNavigate();
 
-  console.log(`Parameters ${id} ${genre_id}`);
+  const handleGoBack = () => {
+    navigate(-1); // Вернуться на предыдущую страницу
+  };
+
+  // console.log(`Parameters ${id} ${genre_id}`);
 
   const {data, isLoading, isSuccess} = useQuery({
     queryFn: () => fetchFilmInfo(id),
@@ -22,8 +25,8 @@ function FilmInfo() {
     queryKey: ["filmGenres"],
   });
 
-  console.log('---filmGenres');
-  console.log(filmGenres);
+  // console.log('---filmGenres');
+  // console.log(filmGenres);
 
   return (
     <>
@@ -48,7 +51,7 @@ function FilmInfo() {
                 alt="Плакат фильма"
               />
             </div>
-            <Link className={styles.returnLink} to="/">Назад к списку фильмов</Link>
+            <button className={styles.returnLink} onClick={handleGoBack}>Назад к списку фильмов</button>
           </section>
           <section className={styles.main_sameList}>
             <h2 className={styles.main_caption}>Похожие фильмы</h2>
