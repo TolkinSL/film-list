@@ -5,3 +5,51 @@
   height: 100%;
   color: var(--text-primary-color);
 }
+
+.returnLink {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 8px 8px;
+  color: var(--text-primary-color);
+  background: var(--header-color);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.main_caption {
+  margin: 0 0 24px;
+}
+
+.main_info {
+  display: flex;
+  column-gap: 32px;
+  margin-bottom: 16px;
+}
+
+.info_description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.info_overview {
+  margin: 0;
+}
+
+.info_data {
+  margin: 0;
+}
+
+.main_sameList {
+  box-sizing: border-box;
+  padding: 24px 12px;
+  color: var(--text-primary-color);
+}
+
+.film_list {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  //column-gap: 32px;
+}

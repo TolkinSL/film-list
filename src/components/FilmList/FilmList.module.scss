@@ -5,3 +5,9 @@
   height: 100%;
   color: var(--text-primary-color);
 }
+
+.film_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}

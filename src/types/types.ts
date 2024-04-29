@@ -1,3 +1,9 @@
+export type Genre = {
+  id: number;
+  name: string;
+}
+
+
 export type Film = {
   adult: boolean,
   backdrop_path: string,
@@ -12,8 +18,15 @@ export type Film = {
   title: string,
   video: boolean,
   vote_average: number,
-  vote_count: number
+  vote_count: number,
+  runtime?: number,
+  genres?: Genre[],
 }
+
+export type FilmExtend = Film & {
+  runtime: number,
+  genres: Genre[],
+};
 
 export type FilmList = {
   page: number,
