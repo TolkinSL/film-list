@@ -5,27 +5,31 @@ import FilmList from "./components/FilmList/FilmList";
 import FilmInfo from "./components/FilmInfo/FilmInfo";
 
 const router = createBrowserRouter([
+    {
+      path: "/",
+      Component: Layout,
+      children: [
+        {
+          path: "/",
+          Component: FilmList,
+          children: [
+            {
+              path: "/:id",
+              Component: FilmList,
+            },
+          ],
+        },
+        {
+          path: "film/:id/:genre_id",
+          Component: FilmInfo,
+        },
+      ],
+    },
+  ],
   {
-    path: "/",
-    Component: Layout,
-    children: [
-      {
-        path: "/",
-        Component: FilmList,
-        children: [
-          {
-            path: "/:id",
-            Component: FilmList,
-          },
-        ],
-      },
-      {
-        path: "film/:id/:genre_id",
-        Component: FilmInfo,
-      },
-    ],
+    basename: "/film-list",
   },
-]);
+);
 
 function App() {
   return (

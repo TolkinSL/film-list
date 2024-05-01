@@ -15,12 +15,12 @@ function FilmInfo() {
 
   // console.log(`Parameters ${id} ${genre_id}`);
 
-  const {data, isLoading, isSuccess} = useQuery({
+  const {data, isSuccess} = useQuery({
     queryFn: () => fetchFilmInfo(id),
     queryKey: ["info", id],
   });
 
-  const { data: filmGenres, isLoading: genresLoading, isSuccess: genresSuccess } = useQuery({
+  const { data: filmGenres, isSuccess: genresSuccess } = useQuery({
     queryFn: () => fetchFilmGenres(genre_id),
     queryKey: ["filmGenres"],
   });
