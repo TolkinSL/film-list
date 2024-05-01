@@ -7,6 +7,8 @@
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) 
 
 ### Проект Кино справочник - React + TypeScript + Vite + React Router + React Query
+
+### Демонстрация проекта под VPN https://tolkinsl.github.io/film-list/
 # _________________________
 # React + TypeScript + Vite
 
